@@ -1,0 +1,52 @@
+Dec 12 16:36:00.789 HYPERVISOR: Release 0.2.14-x86/Windows (tag 2014092320)
+Dec 12 16:36:00.790 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 64235.
+Dec 12 16:36:00.805 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 12 16:36:00.809 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\user\GNS3\projects\NetworkingA3\project-files\dynamips 
+Dec 12 16:36:00.809 GENERAL: working_dir=C:\Users\user\GNS3\projects\NetworkingA3\project-files\dynamips
+Dec 12 16:36:00.814 HYPERVISOR: exec_cmd: vm create R3 3 c3600 
+Dec 12 16:36:00.816 VM: VM R3 created.
+Dec 12 16:36:00.819 HYPERVISOR: exec_cmd: vm set_con_tcp_port R3 5002 
+Dec 12 16:36:00.824 HYPERVISOR: exec_cmd: c3600 get_mac_addr R3 
+Dec 12 16:36:00.828 HYPERVISOR: exec_cmd: vm get_status R3 
+Dec 12 16:36:00.833 HYPERVISOR: exec_cmd: vm slot_add_binding R3 1 0 NM-1FE-TX 
+Dec 12 16:36:00.837 HYPERVISOR: exec_cmd: vm get_status R3 
+Dec 12 16:36:00.842 HYPERVISOR: exec_cmd: vm set_idle_pc R3 0x60668230 
+Dec 12 16:36:00.848 HYPERVISOR: exec_cmd: vm set_ram R3 192 
+Dec 12 16:36:00.853 HYPERVISOR: exec_cmd: vm get_status R3 
+Dec 12 16:36:00.857 HYPERVISOR: exec_cmd: vm slot_add_binding R3 2 0 NM-1FE-TX 
+Dec 12 16:36:00.861 HYPERVISOR: exec_cmd: vm set_nvram R3 256 
+Dec 12 16:36:00.866 HYPERVISOR: exec_cmd: vm set_exec_area R3 64 
+Dec 12 16:36:00.870 HYPERVISOR: exec_cmd: vm set_ios R3 C:/Users/user/GNS3/images/IOS/c3640-is-mz.124-17.image 
+Dec 12 16:36:00.875 HYPERVISOR: exec_cmd: vm get_status R3 
+Dec 12 16:36:00.880 HYPERVISOR: exec_cmd: vm slot_add_binding R3 3 0 NM-4T 
+Dec 12 16:36:00.885 HYPERVISOR: exec_cmd: vm get_status R3 
+Dec 12 16:36:00.889 HYPERVISOR: exec_cmd: vm slot_add_binding R3 0 0 NM-1FE-TX 
+Dec 12 16:36:00.898 HYPERVISOR: exec_cmd: vm set_config R3 configs/i3_startup-config.cfg 
+Dec 12 16:36:35.144 HYPERVISOR: exec_cmd: vm rename R3 Babu-R3 
+Dec 12 16:37:11.382 HYPERVISOR: exec_cmd: nio create_udp udp-8bc47dd3-a0f0-4410-a5f3-1c495c895e9a 10003 127.0.0.1 10002 
+Dec 12 16:37:11.391 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Babu-R3 3 2 udp-8bc47dd3-a0f0-4410-a5f3-1c495c895e9a 
+Dec 12 16:37:11.400 HYPERVISOR: exec_cmd: vm get_status Babu-R3 
+Dec 12 16:37:17.149 HYPERVISOR: exec_cmd: nio create_udp udp-d41f65f3-3ac9-4ca5-9d76-430cccb956fd 10005 127.0.0.1 10004 
+Dec 12 16:37:17.160 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Babu-R3 3 1 udp-d41f65f3-3ac9-4ca5-9d76-430cccb956fd 
+Dec 12 16:37:17.170 HYPERVISOR: exec_cmd: vm get_status Babu-R3 
+Dec 12 16:40:06.472 HYPERVISOR: exec_cmd: vm create Ghost 0 c3600 
+Dec 12 16:40:06.474 VM: VM Ghost created.
+Dec 12 16:40:06.482 HYPERVISOR: exec_cmd: vm set_ios Ghost C:/Users/user/GNS3/images/IOS/c3640-is-mz.124-17.image 
+Dec 12 16:40:06.489 HYPERVISOR: exec_cmd: vm set_ghost_status Ghost 1 
+Dec 12 16:40:06.494 HYPERVISOR: exec_cmd: vm set_ghost_file Ghost c3640-is-mz.124-17.image-192.ghost 
+Dec 12 16:40:06.498 HYPERVISOR: exec_cmd: vm set_ram Ghost 192 
+Dec 12 16:40:06.503 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Dec 12 16:40:06.508 HYPERVISOR: exec_cmd: vm start Ghost 
+Dec 12 16:40:06.856 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Dec 12 16:40:06.863 HYPERVISOR: exec_cmd: vm stop Ghost 
+Dec 12 16:40:06.928 VM: VM Ghost shutdown.
+Dec 12 16:40:06.933 HYPERVISOR: exec_cmd: vm clean_delete Ghost 
+Dec 12 16:40:06.933 VM: VM Ghost destroyed.
+Dec 12 16:40:06.951 HYPERVISOR: exec_cmd: vm set_ghost_status Babu-R3 2 
+Dec 12 16:40:06.957 HYPERVISOR: exec_cmd: vm set_ghost_file Babu-R3 c3640-is-mz.124-17.image-192.ghost 
+Dec 12 16:40:06.965 HYPERVISOR: exec_cmd: vm get_status Babu-R3 
+Dec 12 16:40:06.975 HYPERVISOR: exec_cmd: vm start Babu-R3 
+Dec 12 20:06:17.723 HYPERVISOR: exec_cmd: vm get_status Babu-R3 
+Dec 12 20:06:17.746 HYPERVISOR: exec_cmd: vm stop Babu-R3 
+Dec 12 20:06:17.891 VM: VM Babu-R3 shutdown.
+Dec 12 20:06:17.910 HYPERVISOR: exec_cmd: vm extract_config Babu-R3 
